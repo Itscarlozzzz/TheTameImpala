@@ -1,120 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tame Impala Fansite</title>
-
-  <!-- Fuente bonita -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Botón para volver arriba -->
-  <button id="toTop" aria-label="Volver arriba">↑</button>
-
-  <header id="inicio" class="hero">
-    <div class="overlay"></div>
-    <div class="hero-content">
-      <h1>Tame Impala Fansite</h1>
-      <p>Un espacio hecho por fans, para fans ✨</p>
-      <a href="#discografia" class="btn-primario">Explorar</a>
-    </div>
+  <header>
+    <h1>The Tame Impala</h1>
+    <p>Sígueme en IG: <a href="https://instagram.com/TU_CUENTA" target="_blank">@TU_CUENTA</a></p>
   </header>
-
-  <nav id="nav">
-    <a href="#inicio">Inicio</a>
-    <a href="#discografia">Discografía</a>
-    <a href="#letras">Letras</a>
-    <a href="#frase">Frase Aleatoria</a>
-    <a href="#quiz">Quiz</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
-
-  <main>
-    <!-- DISCROGRAFÍA -->
-    <section id="discografia" class="section fade-in">
-      <h2>Discografía</h2>
-      <div class="filter">
-        <input type="text" id="filterInput" placeholder="Filtrar por año, álbum o canción..." />
-      </div>
-
-      <div id="albums" class="cards"></div>
-    </section>
-
-    <!-- LETRAS -->
-    <section id="letras" class="section fade-in">
-      <h2>Letras & Traducciones</h2>
-      <p>Haz clic en una canción para ver su letra y tu traducción.</p>
-      <details>
-        <summary>Let It Happen (2015)</summary>
-        <div class="lyrics">
-          <h4>Let It Happen – Letra (fragmento)</h4>
-          <p>It's always around me, all this noise, but not really as loud as the voice saying<br>
-          "Let it happen, let it happen"...</p>
-          <h4>Traducción (tu interpretación)</h4>
-          <p>Siempre está a mi alrededor, todo este ruido, pero no tan fuerte como la voz que dice<br>
-          "Déjalo pasar, déjalo pasar"...</p>
-        </div>
-      </details>
-      <details>
-        <summary>Feels Like We Only Go Backwards (2012)</summary>
-        <div class="lyrics">
-          <h4>Feels Like We Only Go Backwards – Letra (fragmento)</h4>
-          <p>It feels like I only go backwards, baby<br>
-          Every part of me says, "Go ahead"...</p>
-          <h4>Traducción</h4>
-          <p>Siento que solo vamos hacia atrás, cariño<br>
-          Cada parte de mí dice: "Adelante"...</p>
-        </div>
-      </details>
-      <!-- Agrega más songs cuando quieras -->
-    </section>
-
-    <!-- FRASE ALEATORIA -->
-    <section id="frase" class="section fade-in">
-      <h2>Frase aleatoria</h2>
-      <blockquote id="quoteBox">Cargando...</blockquote>
-      <button id="newQuote" class="btn-secundario">Otra frase</button>
-    </section>
-
-    <!-- QUIZ -->
-    <section id="quiz" class="section fade-in">
-      <h2>Quiz: ¿Qué tan fan eres?</h2>
-      <p>Pon a prueba tu conocimiento. 5 preguntas rápidas.</p>
-      <button id="startQuiz" class="btn-primario">Comenzar</button>
-    </section>
-
-    <!-- MODAL QUIZ -->
-    <div id="quizModal" class="modal hidden" aria-hidden="true">
-      <div class="modal-content">
-        <button class="close" id="closeQuiz">×</button>
-        <h3>Quiz Tame Impala</h3>
-        <div id="quizContainer"></div>
-      </div>
-    </div>
-
-    <!-- CONTACTO -->
-    <section id="contacto" class="section fade-in">
-      <h2>Contacto</h2>
-      <p>Sígueme en IG: <a href="https://instagram.com/TU_CUENTA" target="_blank">@TU_CUENTA</a></p>
-      <form id="contactForm" class="contact-form" onsubmit="return false;">
-        <input type="text" id="name" placeholder="Tu nombre" required>
-        <input type="email" id="email" placeholder="Tu email" required>
-        <textarea id="msg" rows="4" placeholder="Tu mensaje"></textarea>
-        <button class="btn-secundario" id="sendMsg">Enviar</button>
-        <p id="formMsg" class="form-msg"></p>
-      </form>
-    </section>
+  <main class="grid">
+    <a href="pages/lyrics.html" class="card">Letras<br><span>(Todas las letras)</span></a>
+    <a href="pages/discography.html" class="card">Discografía</a>
+    <a href="pages/phrases.html" class="card">Frases<br><span>(+100 frases)</span></a>
+    <a href="pages/quiz.html" class="card">Quiz<br><span>(100 preguntas)</span></a>
   </main>
-
-  <footer>
-    <p>Hecho con ❤️ por Carlos | No oficial | 2025</p>
-  </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
